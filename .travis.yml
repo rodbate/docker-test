@@ -14,4 +14,9 @@ install:
 
 script:
     - docker ps -a | grep "$DOCKER_REPO"
+    
+    
+    
+    
+    
 
