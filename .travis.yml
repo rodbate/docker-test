@@ -1,0 +1,17 @@
+env:
+    global:
+        - DOCKER_REPO=rodbate/docker-test
+
+language: python
+python:
+    - 3.2
+
+services:
+    - docker
+
+install:
+    - docker run "$DOCKER_REPO"
+
+script:
+    - docker ps -a | grep "$DOCKER_REPO"
+
